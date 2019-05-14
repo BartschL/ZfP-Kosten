@@ -1,0 +1,21 @@
+﻿{
+  "nodes":[
+    {"node":0,"name":"Produktionsstückkosten"},
+    {"node":1,"name":"Prüfgerätfixkosten / Stk"},
+    {"node":2,"name":"Prüffixkosten / Stk"},
+    {"node":3,"name":"variable Prüfkosten / Stk"},
+    {"node":4,"name":"Ausfallfolgekosten"},
+    {"node":5,"name":"Produktionsausfall"},
+    {"node":6,"name":"Reperaturaufwand"},
+    {"node":7,"name":"Gesamtkosten"}
+
+  ],
+  "links":[
+    {"source":7,"target":0,"value":100},
+    {"source":7,"target":1,"value":15},
+    {"source":7,"target":2,"value":5},
+    {"source":7,"target":3,"value":60},
+    {"source":7,"target":4,"value":50},
+    {"source":7,"target":5,"value":15},
+    {"source":7,"target":6,"value":10}
+  ]}
