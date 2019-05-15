@@ -2,14 +2,14 @@
 var units = "Euro";
 
 /* SVG frame creation */
-var w = jQuery('#sankey_graph').width()/2,
-    h = jQuery('#sankey_graph').height()/3;
+var w = jQuery('#sankey_graph').width()*0.65,
+    h = jQuery('#sankey_graph').height()*0.8;
 
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 10, left: 30},
-    width = 600 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
+    width = w - margin.left - margin.right,
+    height = h - margin.top - margin.bottom;
 
 // format variables
 var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -22,7 +22,7 @@ var svg = d3.select("#sankey_graph").append("svg")
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+        "translate(" + margin.left+ "," + margin.top + ")");
 
 
 // Set the sankey diagram properties
@@ -33,9 +33,6 @@ var sankey = d3.sankey()
 
 // load the data
 d3.json("./data/costs_zfp.json", function(error, graph) {
-// load the data
-//d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_sankey.json", function(error, graph) {
-
     sankey
         .nodes(graph.nodes)
         .links(graph.links)
