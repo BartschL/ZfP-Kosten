@@ -1,21 +1,24 @@
-﻿{
+{
   "nodes":[
-    {"node":0,"name":"Produktionsstückkosten"},
-    {"node":1,"name":"Prüfgerätfixkosten / Stk"},
-    {"node":2,"name":"Prüffixkosten / Stk"},
-    {"node":3,"name":"variable Prüfkosten / Stk"},
-    {"node":4,"name":"Ausfallfolgekosten"},
-    {"node":5,"name":"Produktionsausfall"},
-    {"node":6,"name":"Reperaturaufwand"},
-    {"node":7,"name":"Gesamtkosten"}
-
+    {"node":0,"name":"Preis"},
+    {"node":1,"name":"Produktionsstückkosten"},
+    {"node":2,"name":"Gewinn"},
+    {"node":3,"name":"Prüfgerätfixkosten / Stk"},
+    {"node":4,"name":"Prüffixkosten / Stk"},
+    {"node":5,"name":"variable Prüfkosten / Stk"},
+    {"node":6,"name":"Nutzen"},
+    {"node":7,"name":"Ausfallfolgekosten"},
+    {"node":8,"name":"Produktionsausfall"},
+    {"node":9,"name":"Reperaturaufwand"}
   ],
   "links":[
-    {"source":7,"target":0,"value":100},
-    {"source":7,"target":1,"value":15},
-    {"source":7,"target":2,"value":5},
-    {"source":7,"target":3,"value":60},
-    {"source":7,"target":4,"value":50},
-    {"source":7,"target":5,"value":15},
-    {"source":7,"target":6,"value":10}
+    {"source":1,"target":0,"value":100},
+    {"source":2,"target":0,"value":20},
+    {"source":3,"target":0,"value":15},
+    {"source":4,"target":0,"value":5},
+    {"source":5,"target":0,"value":10},
+    {"source":0,"target":6,"value":75},
+    {"source":0,"target":7,"value":50},
+    {"source":0,"target":8,"value":15},
+    {"source":0,"target":9,"value":10}
   ]}
